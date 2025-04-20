@@ -1,0 +1,19 @@
+{
+  "appId": "com.alvin.nads",
+  "productName": "NADS App",
+  "directories": {
+    "buildResources": "public",
+    "output": "dist"
+  },
+  "files": [
+    "build/**/*",
+    "main.js"
+  ],
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb"
+    ],
+    "icon": "logo512.png"
+  }
+}
