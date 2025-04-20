@@ -84,7 +84,7 @@ function App() {
         </div>
       </header>
       <footer className="App-footer">
-        Created with ❤️ for lazy people by a lazy person
+        Created with ❤️ for lazy people by alphvin
         <a 
           href="https://github.com/NoHidSe/NADS"
           target="_blank"
