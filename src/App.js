@@ -7,6 +7,7 @@ function App() {
   const [result, setResult] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isShortName, setIsShortName] = useState(true);
+  const [showRealName, setShowRealName] = useState(false);
 
   const handleReplace = () => {
     const { from, to } = replacementsDB[selectedIndex];
@@ -35,6 +36,10 @@ function App() {
 
   const toggleHeader = () => {
     setIsShortName(!isShortName);
+  };
+
+  const toggleCredits = () => {
+    setShowRealName(!showRealName);
   };
 
   return (
@@ -84,8 +89,14 @@ function App() {
         </div>
       </header>
       <footer className="App-footer">
-        Created with ❤️ for lazy people by alphvin
-        <a 
+        Created with ❤️ for lazy people by{' '}
+        <span
+          onClick={toggleCredits}
+          className="credits-toggle"
+        >
+          {showRealName ? 'alphvin' : 'a lazy person'}
+        </span>
+        <a
           href="https://github.com/NoHidSe/NADS"
           target="_blank"
           rel="noopener noreferrer"

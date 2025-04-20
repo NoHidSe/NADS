@@ -346,6 +346,18 @@ textarea:focus {
     "YTLC" 500;
 }
 
+.credits-toggle {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  transition: all 0.2s ease;
+  color: var(--clr-primary-a50);
+}
+
+.credits-toggle:hover {
+  text-decoration: underline solid;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .layout-grid {
     height: auto;
