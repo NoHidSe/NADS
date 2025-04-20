@@ -78,6 +78,14 @@ function App() {
       </header>
       <footer className="App-footer">
         Created with ❤️ for lazy people by a lazy person
+        <a 
+          href="https://github.com/NoHidSe/NADS"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: '10px', color: '#fff' }}
+        >
+          <i className="fab fa-github"></i>
+        </a>
       </footer>
     </div>
   );
