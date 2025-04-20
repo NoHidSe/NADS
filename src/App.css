@@ -49,6 +49,20 @@
   padding: var(--spacing);
 }
 
+.App-header h1 {
+  transition: all 0.2s ease-in-out;
+}
+
+.App-header h1:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.App-header h1:active {
+  transform: translateY(1px);
+  text-shadow: none;
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -256,7 +270,13 @@ textarea:focus {
   margin-bottom: 12px;
 }
 
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+}
+
 .copy-btn {
+  transition: transform 0.2s ease;
   background: transparent;
   border: 2px solid var(--clr-primary-a50);
   color: var(--clr-primary-a50);
@@ -264,12 +284,15 @@ textarea:focus {
   padding: 4px 8px;
   border-radius: var(--border-radius);
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .copy-btn:hover {
   background: var(--clr-primary-a50);
   color: var(--clr-surface-a0);
+}
+
+.copy-btn:active {
+  animation: bounce 0.3s ease;
 }
 
 .result h3 {

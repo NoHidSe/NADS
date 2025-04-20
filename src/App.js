@@ -6,6 +6,7 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isShortName, setIsShortName] = useState(true);
 
   const handleReplace = () => {
     const { from, to } = replacementsDB[selectedIndex];
@@ -32,10 +33,16 @@ function App() {
     }
   };
 
+  const toggleHeader = () => {
+    setIsShortName(!isShortName);
+  };
+
   return (
     <div className="App nunito-sans-base">
       <header className="App-header">
-        <h1>NADS</h1>
+        <h1 onClick={toggleHeader} style={{ cursor: 'pointer' }}>
+          {isShortName ? 'NADS' : 'NoAIDetectionSoftware'}
+        </h1>
         <div className="input-container">
           <div className="layout-grid">
             <div className="input-section">
