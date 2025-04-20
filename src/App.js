@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { replacementsDB } from './replacementsDB';
 import './App.css';
 
@@ -8,6 +8,18 @@ function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isShortName, setIsShortName] = useState(true);
   const [showRealName, setShowRealName] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const desktop = window.innerWidth >= 768;
+      setIsDesktop(desktop);
+      if (!desktop) setIsShortName(true);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleReplace = () => {
     const { from, to } = replacementsDB[selectedIndex];
@@ -35,7 +47,9 @@ function App() {
   };
 
   const toggleHeader = () => {
-    setIsShortName(!isShortName);
+    if (isDesktop) {
+      setIsShortName(!isShortName);
+    }
   };
 
   const toggleCredits = () => {
@@ -45,7 +59,11 @@ function App() {
   return (
     <div className="App nunito-sans-base">
       <header className="App-header">
-        <h1 onClick={toggleHeader} style={{ cursor: 'pointer' }}>
+        <h1 onClick={toggleHeader} style={{ 
+          cursor: isDesktop ? 'pointer' : 'default',
+          userSelect: 'none',
+          transition: 'transform 0.3s ease'
+        }}>
           {isShortName ? 'NADS' : 'NoAIDetectionSoftware'}
         </h1>
         <div className="input-container">
