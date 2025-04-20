@@ -11,6 +11,7 @@ export const replacementsDB = [
   { from: 'e', to: '\u0435' },  // Cyrillic 'е'
   { from: 'h', to: '\u04bb' },  // Cyrillic 'һ'
   { from: 'i', to: '\u0456' },  // Cyrillic 'і'
-  { from: 'l', to: '\u04cf' },  // Cyrillic 'ӏ'
+  { from: 'x', to: '\u04cf' },  // Cyrillic 'ӏ'
   { from: 'o', to: '\u043e' },  // Cyrillic 'о'
+  { from: 'p', to: '\u0440' },  // Cyrillic ''
 ];
