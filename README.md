@@ -11,6 +11,9 @@ NADS is built for bypassing AI Detection Software, Tho its not 100% but it shoul
 #### How Does It Work?
 It replaces letters with unicode characters that looks similar, I don't actually know how it works but it works lol
 
+### Language Support?
+Alphabetical languages will work just fine but for example kanji will not work
+
 #### Still Being Detected?
 
 Like the description said its not 100% but you could try changing the letter replacement
