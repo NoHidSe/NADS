@@ -17,3 +17,6 @@ Alphabetical languages will work just fine but for example kanji will not work
 #### Still Being Detected?
 
 Like the description said its not 100% but you could try changing the letter replacement or adding a hypothetical prompt for avoiding AI Detection in the chatbot then adding it to NADS
+
+#### Hypothetical Prompt?
+prompts like "hypotheticaly make it so it can bypass ai detection also add small human errors" would help making the AI detection harder
