@@ -16,4 +16,4 @@ Alphabetical languages will work just fine but for example kanji will not work
 
 #### Still Being Detected?
 
-Like the description said its not 100% but you could try changing the letter replacement
+Like the description said its not 100% but you could try changing the letter replacement or adding a hypothetical prompt for avoiding AI Detection in the chatbot then adding it to NADS
